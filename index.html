@@ -1,0 +1,361 @@
+<!-- Web Development by Yogesh S.Waradkar
+Project : NGO-Website.
+File Name : index.html 
+Date : 16-09-2025
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hope for All - NGO</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container navbar">
+        <div class="logo">
+          <a href="#home"
+            ><img src="./media/logoWhite.png" alt="Hope for All" width="130px"
+          /></a>
+        </div>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="header-actions">
+          <a href="#register" class="btn">Register</a>
+          <a href="#donate" class="btn btn-light"
+            >Donate <i class="fa-solid fa-heart"></i
+          ></a>
+        </div>
+        <div class="hamburger" onclick="openMenu()">☰</div>
+      </div>
+      <nav class="nav-menu">
+        <div class="container">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="#get-involved">Get Involved</a></li>
+            <li>
+              <a href="#donate">Donate <i class="fa-solid fa-heart"></i></a>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+      <span class="close-btn" onclick="closeMenu()">&times;</span>
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#about" onclick="closeMenu()">About</a>
+      <a href="#work" onclick="closeMenu()">Our Work</a>
+      <a href="#get-involved" onclick="closeMenu()">Get Involved</a>
+      <a href="#donate" onclick="closeMenu()"
+        >Donate <i class="fa-solid fa-heart"></i
+      ></a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-overlay">
+        <div class="container">
+          <div class="hero-content reveal">
+            <h1>Hope for All</h1>
+            <p>Empowering Lives Through Education and Support</p>
+            <a href="#donate" class="btn btn-hero"
+              >Donate Now <i class="fa-solid fa-heart"></i
+            ></a>
+          </div>
+        </div>
+        <a href="#about" class="scroll-down"
+          ><i class="fas fa-angle-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about reveal">
+      <div class="container about-content">
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            Hope for All is dedicated to improving lives by supporting child
+            education and empowering women through sustainable community
+            initiatives. Our mission is to create opportunities, build
+            confidence, and inspire change in society.
+          </p>
+        </div>
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=600&q=80"
+            alt="Community Work"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="work reveal">
+      <div class="container">
+        <h2>Our Work</h2>
+        <div class="work-cards">
+          <div class="card">
+            <i class="fas fa-book-open"></i>
+            <h3>Child Education</h3>
+            <p>
+              Providing access to quality education for underprivileged children
+              and building a brighter future.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-female"></i>
+            <h3>Women Empowerment</h3>
+            <p>
+              Helping women gain skills, resources, and confidence to become
+              independent and self-reliant.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-tools"></i>
+            <h3>Skill Training</h3>
+            <p>
+              Equipping communities with vocational training to improve job
+              opportunities and income generation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impact Counter Section -->
+    <section id="impact" class="impact reveal">
+      <div class="container">
+        <h2>Our Impact</h2>
+        <div class="impact-stats">
+          <div class="stat">
+            <i class="fas fa-user-graduate"></i>
+            <h3><span class="counter" data-target="1200">0</span>+</h3>
+            <p>Children Educated</p>
+          </div>
+          <div class="stat">
+            <i class="fas fa-female"></i>
+            <h3><span class="counter" data-target="800">0</span>+</h3>
+            <p>Women Empowered</p>
+          </div>
+          <div class="stat">
+            <i class="fas fa-hands-helping"></i>
+            <h3><span class="counter" data-target="500">0</span>+</h3>
+            <p>Volunteers Joined</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events reveal">
+      <div class="container">
+        <h2>Upcoming Events</h2>
+        <div class="event-cards">
+          <!-- Event 1 -->
+          <div class="event-card">
+            <div class="event-date">20 Sept 2025</div>
+            <h3>📚 Book Donation Drive</h3>
+            <p>
+              Help us distribute books to underprivileged children and spark the
+              joy of learning.
+            </p>
+            <a href="#register" class="btn btn-light">Join Now</a>
+          </div>
+          <!-- Event 2 -->
+          <div class="event-card">
+            <div class="event-date">5 Oct 2025</div>
+            <h3>👩‍🏫 Women Skill Workshop</h3>
+            <p>
+              Free training for 50 women in tailoring and entrepreneurship
+              skills.
+            </p>
+            <a href="#register" class="btn btn-light">Volunteer</a>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="event-card">
+            <div class="event-date">15 Oct 2025</div>
+            <h3>🌱 Community Clean-up Drive</h3>
+            <p>Join hands in keeping our local community clean and green.</p>
+            <a href="#register" class="btn btn-light">Participate</a>
+          </div>
+        </div>
+
+        <!-- View All -->
+        <div class="events-footer">
+          <a href="#contact" class="btn btn-dark">View All Events</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Involved -->
+    <section id="get-involved" class="get-involved reveal">
+      <div class="container">
+        <h2>Get Involved</h2>
+        <p>
+          Join us in making a difference - volunteer your time or support with a
+          donation. Together, we can empower lives and build stronger
+          communities.
+        </p>
+        <a href="#donate" class="btn">Volunteer</a>
+        <a href="#donate" class="btn btn-light"
+          >Donate Now <i class="fa-solid fa-heart"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section id="stories" class="stories reveal">
+      <div class="container">
+        <h2>Success Stories</h2>
+        <div class="carousel">
+          <div class="carousel-track">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=600&q=80"
+                alt="Child Education"
+              />
+              <p>
+                "Thanks to Hope for All, I am the first in my family to go to
+                school."
+              </p>
+              <h4>— Rani, 10 years old</h4>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1526256262350-7da7584cf5eb?auto=format&fit=crop&w=600&q=80"
+                alt="Women Empowerment"
+              />
+              <p>
+                "The training gave me confidence to start my own small
+                business."
+              </p>
+              <h4>— Meena, Entrepreneur</h4>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+              <img
+                src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=600&q=80"
+                alt="Volunteer Impact"
+              />
+              <p>
+                "Volunteering here has been life-changing — I feel part of a big
+                family."
+              </p>
+              <h4>— Arjun, Volunteer</h4>
+            </div>
+          </div>
+          <!-- Controls -->
+          <button class="carousel-btn prev">❮</button>
+          <button class="carousel-btn next">❯</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation Form -->
+    <section id="donate" class="donation-form reveal">
+      <div class="donation-overlay">
+        <div class="container">
+          <h2>Donation / Volunteer Form</h2>
+          <div class="donation-tiers">
+            <button type="button" class="tier-btn" data-amount="500">
+              ₹500 - Educate 1 child
+            </button>
+            <button type="button" class="tier-btn" data-amount="1000">
+              ₹1000 - Meals for 20 kids
+            </button>
+            <button type="button" class="tier-btn" data-amount="2500">
+              ₹2500 - Skill training
+            </button>
+          </div>
+          <form id="donationForm">
+            <div class="form-row">
+              <input
+                name="amount"
+                id="amount"
+                type="number"
+                placeholder="Amount (₹)"
+                required
+              />
+              <input
+                name="name"
+                id="name"
+                type="text"
+                placeholder="Your Name"
+                required
+              />
+              <input
+                name="email"
+                id="email"
+                type="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <select name="type" id="type" required>
+                <option value="">Select Option</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="donate">Donate</option>
+              </select>
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+          <p
+            id="formMessage"
+            style="text-align: center; margin-top: 10px; font-weight: 600"
+          ></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container footer-content">
+        <div>
+          <h3>Our Focus</h3>
+          <ul>
+            <li>Child Education</li>
+            <li>Women Empowerment</li>
+            <li>Skill Training</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p>Email: info@hopeforall.org</p>
+          <p>Phone: +91 98765 43210</p>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">© 2025 Hope for All. All Rights Reserved.</div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
