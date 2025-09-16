@@ -1,0 +1,679 @@
+/* 
+
+Web Development by Yogesh S.Waradkar
+Project : NGO-Website.
+File Name : style.css
+All the styles for the Website are in the css file. 
+Date : 16-09-2025
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 94px;
+}
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Theme Colors */
+:root {
+  --primary: #fb5e1c;
+  --primary-dark: #d94e15;
+  --accent: #ffd700;
+  --primary-btn: #d94e15;
+  --primary-btn-over: #fb5e1c;
+}
+
+/* Header */
+.site-header {
+  background: var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+}
+.logo {
+  font-weight: 700;
+  font-size: 22px;
+  color: #fff;
+}
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+.social-icons a {
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+.social-icons a:hover {
+  color: var(--accent);
+}
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+.btn {
+  background: var(--primary-btn);
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+.btn:hover {
+  background: var(--primary-btn-over);
+}
+.btn-light {
+  background: var(--accent);
+  color: #333;
+}
+.btn-light:hover {
+  background: #e6c200;
+}
+
+/* Nav */
+.nav-menu {
+  background: var(--primary-dark);
+}
+.nav-menu ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+  padding: 10px 0;
+}
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
+}
+.nav-menu a:hover {
+  color: var(--accent);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: var(--primary-dark);
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+  z-index: 2000;
+}
+.mobile-menu a {
+  display: block;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.mobile-menu a:hover {
+  background: var(--primary);
+  color: var(--accent);
+}
+.mobile-menu .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Hero  Section */
+.hero {
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1509099836639-18ba1795216d")
+    center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-content {
+  text-align: center;
+  z-index: 2;
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.btn-hero {
+  background: var(--accent);
+  color: #333;
+  font-weight: 600;
+  padding: 10px 20px;
+}
+.btn-hero:hover {
+  background: #e6c200;
+}
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  font-size: 2rem;
+  color: #fff;
+  animation: bounce 2s infinite;
+}
+.scroll-down:hover {
+  color: var(--accent);
+}
+
+/* Keyframe animation for the arrow */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Sections */
+.about,
+.work,
+.donation-form {
+  padding: 60px 20px;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+.about-text h2 {
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+.about-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.work {
+  text-align: center;
+}
+.work h2 {
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-top: 4px solid var(--primary);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Get involved Section */
+.get-involved {
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80")
+    center/cover no-repeat;
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+}
+.get-involved::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.get-involved .container {
+  position: relative;
+  z-index: 2;
+}
+.get-involved h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+.get-involved p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Donation Form */
+.donation-form {
+  background: #f8f9fa;
+}
+.donation-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+.donation-form form {
+  max-width: 700px;
+  margin: 0 auto;
+  display: grid;
+  gap: 15px;
+}
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+.form-row input {
+  flex: 1;
+}
+.donation-form input,
+.donation-form select,
+.donation-form button {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.donation-form button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.donation-form button:hover {
+  background: var(--primary-dark);
+}
+
+/* Footer Section */
+footer {
+  background: var(--primary-dark);
+  color: #fff;
+  padding: 40px 20px;
+}
+footer .footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+footer h3 {
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  margin-bottom: 10px;
+}
+footer ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+footer ul li a:hover {
+  color: var(--accent);
+}
+footer .social-icons a {
+  margin-right: 10px;
+  color: #fff;
+}
+footer .social-icons a:hover {
+  color: var(--accent);
+}
+footer .copyright {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 10px;
+}
+
+/* Reveal funtionality on scroll */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Impact section */
+.impact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff7f4;
+}
+.impact h2 {
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+.impact-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.stat {
+  flex: 1;
+  min-width: 220px;
+}
+.stat i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.stat h3 {
+  font-size: 2rem;
+  color: #333;
+}
+.stat p {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Donation Tiers */
+.donation-tiers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.tier-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.tier-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Success Stories */
+.stories {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff7f4;
+}
+.stories h2 {
+  margin-bottom: 30px;
+  color: var(--primary);
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.slide img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.slide p {
+  font-size: 1.1rem;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.slide h4 {
+  font-weight: 600;
+  color: #555;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: background 0.3s;
+}
+.carousel-btn:hover {
+  background: var(--primary-dark);
+}
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+/* Donation form section */
+.donation-form {
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1400&q=80")
+    center/cover no-repeat;
+  padding: 80px 20px;
+  color: #fff;
+}
+.donation-overlay {
+  position: relative;
+  z-index: 2;
+}
+.donation-form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay */
+  z-index: 1;
+}
+.donation-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+.donation-tiers button {
+  background: var(--accent);
+  color: #333;
+  font-weight: 600;
+}
+.donation-form input,
+.donation-form select {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+.donation-form button[type="submit"] {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Events section */
+.events {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--primary); /* #fb5e1c */
+  color: #fff;
+}
+.events h2 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.event-card {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  border-top: 4px solid var(--primary-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+.event-date {
+  background: var(--primary-dark);
+  color: #fff;
+  font-weight: 600;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+.event-card h3 {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  color: var(--primary);
+}
+.event-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+.event-card .btn-light {
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.event-card .btn-light:hover {
+  background: var(--primary-dark);
+}
+.events-footer {
+  margin-top: 25px;
+}
+.btn-dark {
+  background: #333;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.btn-dark:hover {
+  background: #111;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .social-icons,
+  .nav-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    padding-right: 5px;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+  footer .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
