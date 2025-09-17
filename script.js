@@ -122,3 +122,13 @@ setInterval(() => {
   currentIndex = (currentIndex + 1) % slides.length;
   updateCarousel();
 }, 6000);
+
+//PWA functionality - Register Service Worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/ngo-website/service-worker.js")
+      .then((reg) => console.log("Service Worker registered:", reg.scope))
+      .catch((err) => console.log("SW registration failed:", err));
+  });
+}
