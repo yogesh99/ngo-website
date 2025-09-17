@@ -132,3 +132,22 @@ if ("serviceWorker" in navigator) {
       .catch((err) => console.log("SW registration failed:", err));
   });
 }
+
+//Adding Manual install as app button
+let deferredPrompt;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById("installAppBtn").style.display = "block";
+});
+
+document.getElementById("installAppBtn").addEventListener("click", () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choice) => {
+      console.log("User choice:", choice.outcome);
+      deferredPrompt = null;
+    });
+  }
+});
