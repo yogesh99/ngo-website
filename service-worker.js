@@ -1,3 +1,11 @@
+/* 
+Web Development by Yogesh S.Waradkar
+Project : NGO-Website.
+File Name : service-worker.js
+Service worker file enables the PWA (Progressive Web App) capabilities and the functionalities. 
+Date : 17-09-2025
+*/
+
 const CACHE_NAME = "ngo-cache-v1";
 const urlsToCache = [
   "/ngo-website/",
