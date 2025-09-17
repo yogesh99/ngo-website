@@ -30,6 +30,11 @@ body {
   margin: 0 auto;
 }
 
+.container-hero {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Theme Colors */
 :root {
   --primary: #fb5e1c;
@@ -703,7 +708,7 @@ footer .focus-link a:hover {
     flex-direction: column;
     text-align: center;
   }
-  .container {
-    padding: 0 10px;
+  .container-hero {
+    padding: 0 20px;
   }
 }
