@@ -28,7 +28,6 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* Theme Colors */
@@ -698,10 +697,13 @@ footer .focus-link a:hover {
     margin-right: 20px;
   }
   #installAppBtn {
-    margin-right: 50px;
+    margin-right: 18px;
   }
   footer .footer-content {
     flex-direction: column;
     text-align: center;
+  }
+  .container {
+    padding: 0 10px;
   }
 }
