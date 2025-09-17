@@ -673,6 +673,15 @@ footer .copyright {
   .form-row {
     flex-direction: column;
   }
+  #register-btn {
+    display: none;
+  }
+  #donate-btn {
+    margin-right: 20px;
+  }
+  #installAppBtn {
+    margin-right: 50px;
+  }
   footer .footer-content {
     flex-direction: column;
     text-align: center;
