@@ -398,6 +398,7 @@ footer ul li a:hover {
 footer .social-icons a {
   margin-right: 10px;
   color: #fff;
+  transition: color 0.3s;
 }
 footer .social-icons a:hover {
   color: var(--accent);
@@ -409,9 +410,26 @@ footer .copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding-top: 10px;
 }
+footer .footer-link a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+footer .footer-link a:hover {
+  color: var(--accent);
+}
+
+/* Footer Focus links  */
+footer .focus-link a {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+footer .focus-link a:hover {
+  color: var(--accent);
+}
 
 /* Reveal funtionality on scroll */
-
 .reveal {
   opacity: 0;
   transform: translateY(50px);
