@@ -123,7 +123,7 @@ setInterval(() => {
   updateCarousel();
 }, 6000);
 
-//PWA functionality - Register Service Worker
+// PWA functionality - Register Service Worker
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
@@ -133,21 +133,39 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-//Adding Manual install as app button
+// Adding Manual install as app button
 let deferredPrompt;
+const installBtn = document.getElementById("installAppBtn");
 
+// Listen for the install prompt event
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   deferredPrompt = e;
-  document.getElementById("installAppBtn").style.display = "block";
+
+  // Show the button
+  installBtn.style.display = "block";
 });
 
-document.getElementById("installAppBtn").addEventListener("click", () => {
+// Handle the button click
+installBtn.addEventListener("click", () => {
   if (deferredPrompt) {
     deferredPrompt.prompt();
+
     deferredPrompt.userChoice.then((choice) => {
       console.log("User choice:", choice.outcome);
+
+      if (choice.outcome === "accepted") {
+        console.log("PWA installed");
+        installBtn.style.display = "none"; // Hide button after install
+      }
+
       deferredPrompt = null;
     });
   }
+});
+
+// Hide the button if already installed
+window.addEventListener("appinstalled", () => {
+  console.log("PWA was installed");
+  installBtn.style.display = "none";
 });
