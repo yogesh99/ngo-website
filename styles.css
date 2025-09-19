@@ -124,7 +124,7 @@ body {
 .hamburger {
   display: none;
   font-size: 24px;
-  color: #111;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -143,7 +143,7 @@ body {
 }
 .mobile-menu a {
   display: block;
-  color: #111;
+  color: #fff;
   padding: 12px 24px;
   text-decoration: none;
   font-size: 18px;
@@ -159,7 +159,7 @@ body {
   right: 20px;
   font-size: 28px;
   cursor: pointer;
-  color: #111;
+  color: #fff;
 }
 
 /* Hero  Section */
@@ -301,7 +301,7 @@ body {
   position: relative;
   background: url("./media/Children.jpg") center/cover no-repeat;
   padding: 80px 20px;
-  color: #111;
+  color: #fff;
   text-align: center;
 }
 .get-involved::before {
