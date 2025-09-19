@@ -37,13 +37,13 @@ body {
 
 /* Theme Colors */
 :root {
-  --primary: #1c9290;
-  --primary-dark: #043e52;
-  --accent: #ffd700;
-  --primary-btn: #043e52;
-  --primary-btn-over: #1c9290;
+  --primary: #3949ab; /* Slate (cool) Blue - reliability + calm */
+  --primary-dark: #283593; /* Darker Shade */
+  --accent: #ffeb3b; /* Yellow for hope / attention */
+  --primary-btn: #3949ab;
+  --primary-btn-over: #ffeb3b;
+  --hover-over: #111;
 }
-
 /* Header */
 .site-header {
   background: var(--primary);
@@ -60,7 +60,7 @@ body {
 .logo {
   font-weight: 700;
   font-size: 22px;
-  color: #fff;
+  color: #111;
 }
 .social-icons {
   display: flex;
@@ -79,7 +79,7 @@ body {
   gap: 10px;
 }
 .btn {
-  background: var(--primary-btn);
+  background: var(--primary-dark);
   color: #fff;
   padding: 8px 16px;
   text-decoration: none;
@@ -101,7 +101,7 @@ body {
 
 /* Nav */
 .nav-menu {
-  background: var(--primary-dark);
+  background: var(--accent);
 }
 .nav-menu ul {
   display: flex;
@@ -111,20 +111,20 @@ body {
   padding: 10px 0;
 }
 .nav-menu a {
-  color: #fff;
+  color: #111;
   text-decoration: none;
   transition: color 0.3s;
   font-weight: 500;
 }
 .nav-menu a:hover {
-  color: var(--accent);
+  color: var(--primary-dark);
 }
 
 /* Hamburger */
 .hamburger {
   display: none;
   font-size: 24px;
-  color: #fff;
+  color: #111;
   cursor: pointer;
 }
 
@@ -143,7 +143,7 @@ body {
 }
 .mobile-menu a {
   display: block;
-  color: #fff;
+  color: #111;
   padding: 12px 24px;
   text-decoration: none;
   font-size: 18px;
@@ -159,7 +159,7 @@ body {
   right: 20px;
   font-size: 28px;
   cursor: pointer;
-  color: #fff;
+  color: #111;
 }
 
 /* Hero  Section */
@@ -178,7 +178,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -301,7 +301,7 @@ body {
   position: relative;
   background: url("./media/Children.jpg") center/cover no-repeat;
   padding: 80px 20px;
-  color: #fff;
+  color: #111;
   text-align: center;
 }
 .get-involved::before {
@@ -527,9 +527,9 @@ footer .focus-link a:hover {
   padding: 20px;
 }
 .slide img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  border-radius: 20%;
   object-fit: cover;
   margin-bottom: 15px;
 }
@@ -572,6 +572,7 @@ footer .focus-link a:hover {
   position: relative;
   background: url("./media/children2.jpg") center/cover no-repeat;
   padding: 80px 20px;
+  background-position: 0px 10%;
   color: #fff;
 }
 .donation-overlay {
@@ -739,5 +740,8 @@ footer .focus-link a:hover {
   }
   .container-hero {
     padding: 0 20px;
+  }
+  .donation-form {
+    background-position: 60% 10%;
   }
 }

@@ -117,11 +117,11 @@ prevBtn.addEventListener("click", () => {
   updateCarousel();
 });
 
-// Auto-play every 6 seconds
+// Auto-play every 10 seconds
 setInterval(() => {
   currentIndex = (currentIndex + 1) % slides.length;
   updateCarousel();
-}, 6000);
+}, 10000);
 
 // PWA functionality - Register Service Worker
 if ("serviceWorker" in navigator) {
